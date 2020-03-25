@@ -1,11 +1,12 @@
 def my_collect(array)
 if block_given?
   i = 0 
+  collection = []
   while i < array.length 
-    yield(array[i])
+    collection << yield(array[i])
     i += 1 
   end
-  array 
+  collection 
   
 else
   "Hey! No block was given!"  
